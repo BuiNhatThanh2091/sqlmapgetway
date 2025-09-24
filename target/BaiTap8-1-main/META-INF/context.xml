@@ -5,10 +5,24 @@
             type="javax.sql.DataSource"
             factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
             driverClassName="org.postgresql.Driver"
-            url="jdbc:postgresql://ep-icy-forest-ad7jacd1-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&amp;channel_binding=require"
+            url="jdbc:postgresql://ep-icy-forest-ad7jacd1-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&amp;channelBinding=prefer&amp;tcpKeepAlive=true"
             username="neondb_owner"
             password="npg_3LRPQcWVEf2u"
+
             maxTotal="20"
             maxIdle="10"
-            maxWaitMillis="10000"/>
+            maxWaitMillis="10000"
+
+            testOnBorrow="true"
+            validationQuery="SELECT 1"
+            validationQueryTimeout="5"
+            validationInterval="30000"
+
+            removeAbandoned="true"
+            removeAbandonedTimeout="60"
+            logAbandoned="true"
+
+            minEvictableIdleTimeMillis="300000"
+            timeBetweenEvictionRunsMillis="300000"
+            />
 </Context>

@@ -1,0 +1,7 @@
+murach\email\EmailListServlet.class
+murach\data\DBUtil.class
+murach\sql\ConnectionPool.class
+murach\sql\SQLUtil.class
+murach\business\User.class
+murach\data\UserDB.class
+murach\sql\SQLGatewayServlet.class
